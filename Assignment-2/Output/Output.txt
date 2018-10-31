@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---------------------------Welcome---------------------------
 Select one the options : 
 1.Insert a transaction 
@@ -148,4 +149,156 @@ INFO: Display Module Selected
 [NameOnCard: vivekanand,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 6,TotalPrice: 4.0,CreatedOn: 2018-10-17 22:51:05,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
 Do you want to make an another operation y/n
 n
+=======
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+1
+Oct 17, 2018 10:55:24 PM Assignment2 main
+INFO: Create Module Selected
+-------Creating a Transaction-------
+Enter ID
+123344564
+Enter Name_on_card
+Vivek
+CardNumber
+34343434343434
+UnitPrice
+5
+Quantity
+4
+TotalPrice
+5
+ExpDate
+12/2020
+12
+2020
+DAO insert
+Oct 17, 2018 10:55:49 PM Assignment2 main
+INFO: Insertion Sucess
+Do you want to make an another operation y/n
+y
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+3
+Oct 17, 2018 10:56:29 PM Assignment2 main
+INFO: Display Module Selected
+[NameOnCard: w,CardNumber: e,UnitPrice: 2.0,Quantity: 3,TotalPrice: 4.0,CreatedOn: 2018-10-13 23:46:20,ExpDate: 01/2020,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: 32323,CardNumber: 33433443,UnitPrice: 2.0,Quantity: 3,TotalPrice: 3.0,CreatedOn: 2018-10-15 17:27:37,ExpDate: 4,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: vivekanand,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 6,TotalPrice: 4.0,CreatedOn: 2018-10-17 22:51:05,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: Vivek,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 4,TotalPrice: 5.0,CreatedOn: 2018-10-17 22:55:49,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
+Do you want to make an another operation y/n
+y
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+4
+Oct 17, 2018 10:56:55 PM Assignment2 main
+INFO: Update Module Selected
+-------Update the Transaction-------
+Enter the ID
+123344564
+Do you want to change NameonCard(y/n)
+y
+Enter the updated value
+Vivekanandia
+Do you want to change cardNumber(y/n)
+n
+Do you want to change UnitPrice(y/n)
+n
+Do you want to change Quantity(y/n)
+n
+Do you want to change TotalPrice(y/n)
+n
+Do you want to change ExpDate(y/n)
+n
+Do you want to change CreatedOn(y/n)
+n
+Do you want to change CreatedBy(y/n)
+n
+Do you want to change Cardtype(y/n)
+n
+Oct 17, 2018 10:57:35 PM Assignment2 main
+INFO: Updation Sucess
+Not a valid option
+Do you want to make an another operation y/n
+y
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+3
+Oct 17, 2018 10:58:00 PM Assignment2 main
+INFO: Display Module Selected
+[NameOnCard: w,CardNumber: e,UnitPrice: 2.0,Quantity: 3,TotalPrice: 4.0,CreatedOn: 2018-10-13 23:46:20,ExpDate: 01/2020,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: 32323,CardNumber: 33433443,UnitPrice: 2.0,Quantity: 3,TotalPrice: 3.0,CreatedOn: 2018-10-15 17:27:37,ExpDate: 4,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: vivekanand,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 6,TotalPrice: 4.0,CreatedOn: 2018-10-17 22:51:05,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: Vivekanandia,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 4,TotalPrice: 5.0,CreatedOn: 2018-10-17 22:55:49,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
+Do you want to make an another operation y/n
+y
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+1
+Oct 17, 2018 10:58:07 PM Assignment2 main
+INFO: Create Module Selected
+-------Creating a Transaction-------
+Enter ID
+123344564
+Enter Name_on_card
+ggg
+CardNumber
+3434
+UnitPrice
+4
+Quantity
+4
+TotalPrice
+4
+ExpDate
+12/2020
+12
+2020
+DAO insert
+Oct 17, 2018 10:58:27 PM Assignment2 main
+INFO: Insertion Failure
+Do you want to make an another operation y/n
+y
+---------------------------Welcome---------------------------
+Select one the options : 
+1.Insert a transaction 
+2.Delete a transaction 
+3.View all the transactions 
+4.Update a transaction
+2
+Oct 17, 2018 10:59:05 PM Assignment2 main
+INFO: Remove Module Selected
+-------Delete the Transaction-------
+Enter the id to be deleted
+123344564
+Oct 17, 2018 10:59:08 PM Assignment2 main
+INFO: Deletion Sucess
+Oct 17, 2018 10:59:08 PM Assignment2 main
+INFO: Display Module Selected
+[NameOnCard: w,CardNumber: e,UnitPrice: 2.0,Quantity: 3,TotalPrice: 4.0,CreatedOn: 2018-10-13 23:46:20,ExpDate: 01/2020,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: 32323,CardNumber: 33433443,UnitPrice: 2.0,Quantity: 3,TotalPrice: 3.0,CreatedOn: 2018-10-15 17:27:37,ExpDate: 4,CreatedBy: Admin,Cardtype: Unknown]
+[NameOnCard: vivekanand,CardNumber: 34343434343434,UnitPrice: 5.0,Quantity: 6,TotalPrice: 4.0,CreatedOn: 2018-10-17 22:51:05,ExpDate: 12/2020,CreatedBy: Admin,Cardtype: Unknown]
+Do you want to make an another operation y/n
+n
+>>>>>>> 2afce9f9120987374846d404e75b41c4c6d50235
 ---------------------------Thank you---------------------------
