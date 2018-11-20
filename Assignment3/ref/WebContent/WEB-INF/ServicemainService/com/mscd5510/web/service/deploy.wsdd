@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ServicemainService WSDL service -->
+
+  <service name="Servicemain" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.web.mscd5510.com"/>
+      <parameter name="wsdlServiceElement" value="ServicemainService"/>
+      <parameter name="schemaQualified" value="http://service.web.mscd5510.com"/>
+      <parameter name="wsdlServicePort" value="Servicemain"/>
+      <parameter name="className" value="com.mscd5510.web.service.Servicemain"/>
+      <parameter name="wsdlPortType" value="Servicemain"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.web.mscd5510.com" xmlns:retNS="http://service.web.mscd5510.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getValues" qname="operNS:getValues" returnQName="retNS:getValuesReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://service.web.mscd5510.com" xmlns:retNS="http://service.web.mscd5510.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateValue" qname="operNS:updateValue" returnQName="retNS:updateValueReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Id" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Field" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:New_value" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://service.web.mscd5510.com" xmlns:retNS="http://service.web.mscd5510.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="removeValue" qname="operNS:removeValue" returnQName="retNS:removeValueReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://service.web.mscd5510.com" xmlns:retNS="http://service.web.mscd5510.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="insertValue" qname="operNS:insertValue" returnQName="retNS:insertValueReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Id" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Name" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Cardno" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:UnitPrice" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:Quantity" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:TotalPrice" type="tns:string"/>
+        <parameter xmlns:pns="http://service.web.mscd5510.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ExpDate" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="updateValue getValues removeValue insertValue"/>
+
+  </service>
+</deployment>

@@ -17,34 +17,6 @@ import java.util.logging.Logger;
 
 public class MySQLAccess {
 
-	public Connection setupConnection() throws Exception {
-
-		Connection connection = null;
-		try {
-			// This will load the MySQL driver, each DB has its own driver
-			// Class.forName("com.mysql.jdbc.Driver");
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			// Setup the connection with the DB
-
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/tutorial1?" // DTP
-																							// I
-																							// spelled
-																							// transactoins
-																							// wrong
-																							// oops
-					+ "user=root&password=root" // Creds
-					+ "&useSSL=false" // b/c localhost
-					+ "&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"); // timezone
-
-		} catch (Exception e) {
-			throw e;
-			//logger.info(e.getMessage());
-		} finally {
-
-		}
-		return connection;
-	}
-
 	public Collection<Transaction> getAllTransactions(Connection connection,Logger logger) {
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -53,7 +25,7 @@ public class MySQLAccess {
 		try {
 			// Statements allow to issue SQL queries to the database
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from tutorial1.transaction");
+			resultSet = statement.executeQuery("select * from transaction");
 			results = createTrxns(resultSet);
 
 			if (resultSet != null) {

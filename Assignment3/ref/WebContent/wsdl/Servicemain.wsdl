@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.web.mscd5510.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.web.mscd5510.com" xmlns:intf="http://service.web.mscd5510.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.web.mscd5510.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getValues">
+    <complexType/>
+   </element>
+   <element name="getValuesResponse">
+    <complexType>
+     <sequence>
+      <element name="getValuesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateValue">
+    <complexType>
+     <sequence>
+      <element name="Id" type="xsd:string"/>
+      <element name="Field" type="xsd:string"/>
+      <element name="New_value" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateValueResponse">
+    <complexType>
+     <sequence>
+      <element name="updateValueReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeValue">
+    <complexType>
+     <sequence>
+      <element name="Id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeValueResponse">
+    <complexType>
+     <sequence>
+      <element name="removeValueReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertValue">
+    <complexType>
+     <sequence>
+      <element name="Id" type="xsd:string"/>
+      <element name="Name" type="xsd:string"/>
+      <element name="Cardno" type="xsd:string"/>
+      <element name="UnitPrice" type="xsd:string"/>
+      <element name="Quantity" type="xsd:string"/>
+      <element name="TotalPrice" type="xsd:string"/>
+      <element name="ExpDate" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertValueResponse">
+    <complexType>
+     <sequence>
+      <element name="insertValueReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getValuesRequest">
+
+      <wsdl:part element="impl:getValues" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeValueResponse">
+
+      <wsdl:part element="impl:removeValueResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertValueResponse">
+
+      <wsdl:part element="impl:insertValueResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeValueRequest">
+
+      <wsdl:part element="impl:removeValue" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getValuesResponse">
+
+      <wsdl:part element="impl:getValuesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateValueRequest">
+
+      <wsdl:part element="impl:updateValue" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertValueRequest">
+
+      <wsdl:part element="impl:insertValue" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateValueResponse">
+
+      <wsdl:part element="impl:updateValueResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Servicemain">
+
+      <wsdl:operation name="getValues">
+
+         <wsdl:input message="impl:getValuesRequest" name="getValuesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getValuesResponse" name="getValuesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateValue">
+
+         <wsdl:input message="impl:updateValueRequest" name="updateValueRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateValueResponse" name="updateValueResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeValue">
+
+         <wsdl:input message="impl:removeValueRequest" name="removeValueRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeValueResponse" name="removeValueResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertValue">
+
+         <wsdl:input message="impl:insertValueRequest" name="insertValueRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:insertValueResponse" name="insertValueResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ServicemainSoapBinding" type="impl:Servicemain">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getValues">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getValuesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getValuesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateValue">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateValueRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateValueResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeValue">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeValueRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeValueResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertValue">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="insertValueRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="insertValueResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ServicemainService">
+
+      <wsdl:port binding="impl:ServicemainSoapBinding" name="Servicemain">
+
+         <wsdlsoap:address location="http://localhost:8081/ref/services/Servicemain"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

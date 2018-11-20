@@ -7,6 +7,9 @@ public class Assignment2 {
 
 	public static void main(String[] args) {
 		MySQLAccess dao = new MySQLAccess();
+		System.out.println("nothing");
+		Connectionclass connect = Connectionclass.getInstance();
+		
 		String yorn = "";
 		FileHandler fh;
 		SimpleFormatter formatter = new SimpleFormatter();
@@ -14,7 +17,7 @@ public class Assignment2 {
 		Scanner scanner = new Scanner(System.in);
 		do {
 			try {
-				Connection connection = dao.setupConnection();
+				Connection connection = connect.setupConnection();
 
 				fh = new FileHandler("C:\\Users\\Admin\\Documents\\Assignment_2_Logser.log");
 				logger.addHandler(fh);
